@@ -58,12 +58,15 @@ form {
   display: block;
   margin-top: 5px;
   margin-bottom: 5px;
-  border-radius: 3px;
+  background: transparent;
+  border-bottom: 2px solid white;
+  color: white;
 }
 ::-webkit-input-placeholder {
-  color: rgb(75, 75, 75);
+  color: white;
   font-family: "Roboto", sans-serif;
 }
+
 #btn {
   width: 350px;
   display: flex;
@@ -101,4 +104,25 @@ button {
   border: none;
   outline: none;
   border-radius: 5px;
+}
+button:hover {
+  color: rgb(0, 187, 255);
+  background: white;
+  transition: 500ms;
+  animation-name: btn;
+  animation-fill-mode: forwards;
+}
+@keyframes btn {
+  0% {
+    transform: scale(0);
+    transition: 500ms;
+  }
+  50% {
+    transform: scale(1.1);
+    transition: 200ms;
+  }
+  100% {
+    transform: scale(1.2);
+    transition: 500ms;
+  }
 }
